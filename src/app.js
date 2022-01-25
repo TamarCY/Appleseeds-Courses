@@ -24,7 +24,7 @@ mongoose
   .catch((err) => console.error(err));
 
 
-app.use("/users", userRouter)
+app.use("/api/users", userRouter)
 
 app.use("*", (req, res) => {
   res.send("Wrong route");

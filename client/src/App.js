@@ -1,4 +1,4 @@
-import './App.css';
+import UserForm from "./components/UserForm";
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <h1>
         Courses Exercise
       </h1>
+      <UserForm/>
     </div>
   );
 }
