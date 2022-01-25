@@ -3,8 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
-// TODO: add require to the userRouter file
-
+const userRouter = require("./routes/users-routes")
 const app = express();
 
 const publicPath = path.join(__dirname, "../client/build");
@@ -24,11 +23,17 @@ mongoose
   .then(() => console.log("Database connected"))
   .catch((err) => console.error(err));
 
-// TODO: add app.use("/", userRouter)
+
+app.use("/users", userRouter)
 
 app.use("*", (req, res) => {
   res.send("Wrong route");
 });
+
+
+
+
+
 
 
 
